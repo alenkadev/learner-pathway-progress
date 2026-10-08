@@ -43,6 +43,8 @@ html_favicon = "https://logos.openedx.org/open-edx-favicon.ico"
 if not os.environ.get('DJANGO_SETTINGS_MODULE'):
    os.environ['DJANGO_SETTINGS_MODULE'] = 'test_utils.test_settings'
 
+django_setup()
+
 
 html_theme_options = {
 
@@ -144,7 +146,7 @@ release = VERSION
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -500,8 +502,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.8', None),
-    'django': ('https://docs.djangoproject.com/en/2.2/', 'https://docs.djangoproject.com/en/2.2/_objects/'),
+    'python': ('https://docs.python.org/3.12', None),
+    'django': ('https://docs.djangoproject.com/en/5.2/', 'https://docs.djangoproject.com/en/5.2/_objects/'),
     'model_utils': ('https://django-model-utils.readthedocs.io/en/latest/', None),
 }
 
