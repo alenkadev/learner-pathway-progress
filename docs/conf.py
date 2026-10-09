@@ -40,8 +40,10 @@ VERSION = get_version('../learner_pathway_progress', '__init__.py')
 html_logo = "https://logos.openedx.org/open-edx-logo-color.png"
 html_favicon = "https://logos.openedx.org/open-edx-favicon.ico"
 
+# Same settings and mock apps as the tox docs env. Read the Docs doesn't run tox.
+sys.path.insert(0, os.path.join(REPO_ROOT, 'mock_apps'))
 if not os.environ.get('DJANGO_SETTINGS_MODULE'):
-   os.environ['DJANGO_SETTINGS_MODULE'] = 'test_utils.test_settings'
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'test_settings'
 
 django_setup()
 

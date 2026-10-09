@@ -29,8 +29,8 @@ class Migration(migrations.Migration):
             options={
                 'unique_together': {('course_id', 'user_id')},
                 'indexes': [
-                    models.Index(fields=['passed_timestamp', 'course_id'], name='grades_pers_passed__c9f012_idx'),
-                    models.Index(fields=['modified', 'course_id'], name='grades_pers_modifie_20e762_idx'),
+                    models.Index(fields=['passed_timestamp', 'course_id'], name='passed_timestamp_course_id_idx'),
+                    models.Index(fields=['modified', 'course_id'], name='modified_course_id_idx'),
                 ],
             },
         ),
